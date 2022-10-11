@@ -10,7 +10,7 @@
 <link href="css/header.css" rel="stylesheet">
 <link href="css/footer.css" rel="stylesheet">
 <link href="css/header2.css" rel="stylesheet">
-<link href="css/company.css" rel="stylesheet">
+<link href="css/companys.css" rel="stylesheet">
 </head>
 <body>
 	<header class="company_header">

@@ -34,15 +34,15 @@
 	margin-top: 50px;
 }
 
-.companyname_title .companytitle {
+.companyname_title #company_name {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.companyname_title .companynamebox {
+.companyname_title .company_namebox {
 	width: 900px;
 	height: 40px;
-	color: #bbb;
+	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #bbb;
 	padding-left: 10px;
@@ -58,7 +58,7 @@
 	margin-top: 50px;
 }
 
-.boss_set .Representativeaddress {
+.boss_set #address {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
@@ -67,14 +67,14 @@
 	/*대표지 입력란*/
 	width: 440px;
 	height: 40px;
-	color: #bbb;
+	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #bbb;
 	padding-left: 10px;
 	margin-right: 10px;
 }
 
-.boss_set .representativemail {
+.boss_set #email {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
@@ -83,7 +83,7 @@
 	/*대표메일입력란*/
 	width: 440px;
 	height: 40px;
-	color: #bbb;
+	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #bbb;
 	padding-left: 10px;
@@ -97,7 +97,7 @@
 	margin-top: 50px;
 }
 
-.buisnessman .businessnumber {
+.buisnessman #companyNumber {
 	/*사업자번호*/
 	font-size: 16px;
 	margin-bottom: 10px;
@@ -107,24 +107,24 @@
 	/*사업자번호 입력란*/
 	width: 440px;
 	height: 40px;
-	color: #bbb;
+	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #bbb;
 	padding-left: 10px;
 	margin-right: 10px;
 }
 
-.buisnessman .region {
+.buisnessman #regionCodeName {
 	/*대표지역*/
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.buisnessman .form-select {
+.buisnessman #region {
 	/*대표지역입력란*/
 	width: 450px;
 	height: 42px;
-	color: #aaa;
+	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #aaa;
 	padding-left: 10px;
@@ -138,7 +138,7 @@
 	margin-top: 50px;
 }
 
-.companyabouttusset .companyview {
+.companyabouttusset #intro {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
@@ -146,10 +146,11 @@
 .companyabouttusset .companyabouttusform {
 	width: 900px;
 	height: 146px;
-	color: #bbb;
+	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #bbb;
 	padding-left: 10px;
+	resize: none;
 }
 
 /*회사소개완료*/
@@ -162,7 +163,7 @@
 	margin-top: 50px;
 }
 
-.companybirth .establishnumber {
+.companybirth #years {
 	/*사업자번호*/
 	font-size: 16px;
 	margin-bottom: 10px;
@@ -172,14 +173,14 @@
 	/*사업자번호 입력란*/
 	width: 440px;
 	height: 40px;
-	color: #bbb;
+	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #bbb;
 	padding-left: 10px;
 	margin-right: 10px;
 }
 
-.companybirth .employee {
+.companybirth #memberCount {
 	/*직원수*/
 	font-size: 16px;
 	margin-top: 4px;
@@ -190,11 +191,11 @@
 	/*직원수입력란*/
 	width: 450px;
 	height: 42px;
-	color: #aaa;
+	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #aaa;
 	padding-left: 10px;
-	margin-top: -3px;
+	margin-top:10px;
 }
 
 /*설립연도 /직원 수 완료*/
@@ -206,13 +207,13 @@
 	margin-top: 50px;
 }
 
-.Terms_of_service .form-label {
+.Terms_of_service #form-label {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
 .Terms_of_service .sel2 {
-	width: 900px;
+	width: 914px;
 	height: 146px;
 	color: #bbb;
 	border-radius: 5px;
@@ -243,7 +244,7 @@
 	line-height: 44px;
 }
 
-.buttoncheckform .buttoncheck2 .buttoncheckform_submit {
+.buttoncheckform .buttoncheck2 .buttoncheckform-submit {
 	font-size: 16px;
 	color: #fff;
 }
