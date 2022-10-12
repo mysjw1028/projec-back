@@ -114,13 +114,13 @@
 	margin-right: 10px;
 }
 
-.buisnessman #regionCodeName {
+.buisnessman #region{
 	/*대표지역*/
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.buisnessman #region {
+.buisnessman #regionCodeName  {
 	/*대표지역입력란*/
 	width: 450px;
 	height: 42px;

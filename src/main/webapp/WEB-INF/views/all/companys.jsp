@@ -35,7 +35,7 @@
 			<div class="Representativeaddressform">
 				<p class="Representativeaddresstext">대표자주소</p>
 				<div class="center">
-					<input id=address type="text" name="test" placeholder="대표자 주소를 입력해주세요">
+					<input id="address" type="text" name="test" onClick="goPopup();" placeholder="사업자주소 입력해주세요">
 				</div>
 			</div>
 
@@ -61,9 +61,9 @@
 			</div>
 
 			<div class="regionform">
-				<div id="regionCodeName">지역</div>
+				<div id="region">지역</div>
 				<div class="inputbox">
-					<select id="region">
+					<select id="regionCodeName">
 						<option>지역 입력해주세요</option>
 						<option>서울</option>
 						<option>부산</option>
@@ -168,7 +168,7 @@
 				address: $("#address").val(),
 				email: $("#email").val(),
 				companyNumber:$("#companyNumber").val(),
-				regionCodeName: $("#regionCodeName").val(),
+				regionCodeName:$("#regionCodeName").val(),
 				intro: $("#intro").val(),
 				years: $("#years").val(),
 				memberCount: $("#memberCount").val()
@@ -188,7 +188,17 @@
 			}
 		});
 	}
+	
+	function goPopup() {
+		var pop = window.open("/companys/jusoPopup", "pop",
+				"width=570,height=420, scrollbars=yes, resizable=yes");
+	}
+
+	function jusoCallBack(roadFullAddr) {
+		$('#address').val(roadFullAddr);
+	}
 </script>
+
 </html>
 
 <%@ include file="../layout/footer.jsp"%>
