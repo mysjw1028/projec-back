@@ -54,7 +54,12 @@
 
 		<div class="buisnessman">
 			<div class="textboxtitleform">
-				<p class="businessnumberform">사업자번호</p>
+				<div class="businessnumberform">
+					사업자번호
+					<button id="btncompanyNumberSameCheck" type="button">
+						<a href="">사업자번호 중복 체크</a>
+					</button>
+				</div>
 				<div class="centerbusiness">
 					<input id="companyNumber" type="text" name="test" placeholder="사업자번호 입력해주세요">
 				</div>
@@ -141,9 +146,9 @@
 
 		<div class="buttonform">
 			<div class="form_check">
-				<input class="agreecheck" type="checkbox" class="form-check-input" id="check1" name="option1"
-					value="something" checked> <label class="form-check-label" for="agree">이용약관에
-					동의합니다 (필수)</label>
+				<label for="agree_all"> <input type="checkbox" name="agree_all" id="agree_all">
+					<span>이용약관에 동의합니다 (필수)</span>
+				</label>
 			</div>
 
 			<div class="buttoncheckform">
@@ -156,9 +161,11 @@
 		</div>
 
 	</div>
-</body>
-<script>
-	$("#buttoncheckform-submit").click(()=>{
+
+	<script>
+	 let companyNumberSameCheck = false;
+	
+	 $("#buttoncheckform-submit").click(()=>{
 		insert();
 	});
 
@@ -189,6 +196,7 @@
 		});
 	}
 	
+	//주소입력창
 	function goPopup() {
 		var pop = window.open("/companys/jusoPopup", "pop",
 				"width=570,height=420, scrollbars=yes, resizable=yes");
@@ -197,8 +205,12 @@
 	function jusoCallBack(roadFullAddr) {
 		$('#address').val(roadFullAddr);
 	}
-</script>
+	
 
+
+	
+</script>
+</body>
 </html>
 
 <%@ include file="../layout/footer.jsp"%>

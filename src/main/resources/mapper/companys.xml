@@ -6,8 +6,11 @@
 	namespace="site.metacoding.miniproject1.domain.companys.CompanysDao">
 
 	<insert id="insert">
-		INSERT INTO companys(company_name, address, email, company_number, photo, region_code_name, intro, years, member_count, created)
-		VALUES(#{companyName},#{address}, #{email}, #{companyNumber}, NULL, #{regionCodeName}, #{intro}, #{years}, #{memberCount}, NOW());
+		INSERT INTO companys(company_name, address, email,
+		company_number, photo, region_code_name, intro, years, member_count,
+		created)
+		VALUES(#{companyName},#{address}, #{email}, #{companyNumber},
+		NULL, #{regionCodeName}, #{intro}, #{years}, #{memberCount}, NOW());
 	</insert>
 
 	<select id="findAll"
@@ -19,6 +22,13 @@
 		resultType="site.metacoding.miniproject1.domain.companys.Companys">
 
 	</select>
+
+	<select id="findByIdCompanysNumber"
+		resultType="site.metacoding.miniproject1.domain.companys.Companys">
+		SELECT * FROM companys WHERE company_number = #{CompanysNumber}
+	</select>
+
+
 
 	<insert id="update">
 
