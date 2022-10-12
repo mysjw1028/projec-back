@@ -7,7 +7,7 @@
 
 	<insert id="insert">
 		INSERT INTO companys(company_name, address, email, company_number, photo, region_code_name, intro, years, member_count, created)
-		VALUES(#{companyName},#{address}, #{email}, #{companyNumber}, NULL, #{regionCodeName}, #{intro}, #{years}, #{memberCount}, NOW())
+		VALUES(#{companyName},#{address}, #{email}, #{companyNumber}, NULL, #{regionCodeName}, #{intro}, #{years}, #{memberCount}, NOW());
 	</insert>
 
 	<select id="findAll"

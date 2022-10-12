@@ -34,12 +34,12 @@
 	margin-top: 50px;
 }
 
-.companyname_title #company_name {
+.companyname_title .company_namebox {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.companyname_title .company_namebox {
+.companyname_title #companyName {
 	width: 900px;
 	height: 40px;
 	color: #191819;
@@ -58,12 +58,12 @@
 	margin-top: 50px;
 }
 
-.boss_set #address {
+.boss_set .Representativeaddresstext {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.boss_set .Representativeaddresstext {
+.boss_set #address {
 	/*대표지 입력란*/
 	width: 440px;
 	height: 40px;
@@ -74,12 +74,12 @@
 	margin-right: 10px;
 }
 
-.boss_set #email {
+.boss_set .representativemailformtext {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.boss_set .representativemailformtext {
+.boss_set  #email {
 	/*대표메일입력란*/
 	width: 440px;
 	height: 40px;
@@ -97,13 +97,13 @@
 	margin-top: 50px;
 }
 
-.buisnessman #companyNumber {
+.buisnessman .businessnumberform {
 	/*사업자번호*/
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.buisnessman .businessnumberform {
+.buisnessman #companyNumber {
 	/*사업자번호 입력란*/
 	width: 440px;
 	height: 40px;
@@ -138,12 +138,12 @@
 	margin-top: 50px;
 }
 
-.companyabouttusset #intro {
+.companyabouttusset .companyabouttusform {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.companyabouttusset .companyabouttusform {
+.companyabouttusset #intro {
 	width: 900px;
 	height: 146px;
 	color: #191819;
@@ -163,14 +163,14 @@
 	margin-top: 50px;
 }
 
-.companybirth #years {
+.companybirth  .establishyears {
 	/*사업자번호*/
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.companybirth .establishyear {
-	/*사업자번호 입력란*/
+.companybirth #years {
+	/*직원입력란*/
 	width: 440px;
 	height: 40px;
 	color: #191819;
@@ -180,22 +180,27 @@
 	margin-right: 10px;
 }
 
-.companybirth #memberCount {
+.companybirth .establishnumber .femployeeorm {
 	/*직원수*/
 	font-size: 16px;
-	margin-top: 4px;
 	margin-bottom: 10px;
+	margin-top: 5px;
+
 }
 
-.companybirth .femployeeorm {
-	/*직원수입력란*/
-	width: 450px;
-	height: 42px;
+.companybirth .establishnumber{
+	margin-top:-5px;
+}
+
+.companybirth .establishnumber #memberCount {
+	/*직원수*/
+	width: 440px;
+	height: 40px;
 	color: #191819;
 	border-radius: 5px;
 	border: 1px solid #aaa;
 	padding-left: 10px;
-	margin-top:10px;
+	margin-top: -9px;
 }
 
 /*설립연도 /직원 수 완료*/
@@ -207,12 +212,12 @@
 	margin-top: 50px;
 }
 
-.Terms_of_service #form-label {
+.Terms_of_service .sel2 {
 	font-size: 16px;
 	margin-bottom: 10px;
 }
 
-.Terms_of_service .sel2 {
+.Terms_of_service #form-label {
 	width: 914px;
 	height: 146px;
 	color: #bbb;

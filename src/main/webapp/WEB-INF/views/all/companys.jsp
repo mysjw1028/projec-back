@@ -23,9 +23,9 @@
 		<!-- 회사정보이름 -->
 		<div class="companyname_title">
 			<div class="companyname">
-				<div id="company_name">회사이름</div>
+				<div class="company_namebox">회사이름</div>
 				<div class="companynameform">
-					<input class="company_namebox" type="text" name="test" placeholder=" 회사명을 입력해주세요">
+					<input id="companyName" type="text" name="test" placeholder=" 회사명을 입력해주세요">
 				</div>
 			</div>
 		</div>
@@ -33,16 +33,16 @@
 		<!-- 대표지/대표메일구간 -->
 		<div class="boss_set">
 			<div class="Representativeaddressform">
-				<p id=address>대표자주소</p>
+				<p class="Representativeaddresstext">대표자주소</p>
 				<div class="center">
-					<input class="Representativeaddresstext" type="text" name="test" placeholder="대표자 주소를 입력해주세요">
+					<input id=address type="text" name="test" placeholder="대표자 주소를 입력해주세요">
 				</div>
 			</div>
 
 			<div class="representativemailform">
-				<p id="email">대표메일</p>
+				<p class="representativemailformtext">대표메일</p>
 				<div class="center">
-					<input class="representativemailformtext" type="text" name="test" placeholder="대표메일을 입력해주세요">
+					<input id="email" type="text" name="test" placeholder="대표메일을 입력해주세요">
 				</div>
 			</div>
 		</div>
@@ -54,9 +54,9 @@
 
 		<div class="buisnessman">
 			<div class="textboxtitleform">
-				<p id="companyNumber">사업자번호</p>
+				<p class="businessnumberform">사업자번호</p>
 				<div class="centerbusiness">
-					<input class="businessnumberform" type="text" name="test" placeholder="사업자번호 입력해주세요">
+					<input id="companyNumber" type="text" name="test" placeholder="사업자번호 입력해주세요">
 				</div>
 			</div>
 
@@ -89,37 +89,31 @@
 		<!-- 회사소개 -->
 		<div class="companyabouttusset">
 			<div class="companyabouttus">
-				<div id="intro">회사소개</div>
-				<textarea class="companyabouttusform" type="text" name="test"></textarea>
+				<div class="companyabouttusform">회사소개</div>
+				<textarea id="intro" type="text" name="test"></textarea>
 			</div>
 		</div>
 
 
 		<div class="companybirth">
 			<div class="establishform">
-				<div id="years">설립연도</div>
+				<div class="establishyear">설립연도</div>
 				<div class="establish">
-					<input class="establishyear" type="text" name="test" placeholder="ex) 2020년도 ">
+					<input id="years" type="text" name="test" placeholder="ex) 2020년도 ">
 				</div>
 			</div>
 
 			<div class="establishnumber">
-				<div id=" memberCount">직원 수</div>
+				<div class="femployeeorm">직원 수</div>
 				<div class="employeebox">
-					<select class="femployeeorm">
-						<option>회사규모를 선택해주세요</option>
-						<option>10~</option>
-						<option>100~</option>
-						<option>1000~</option>
-						<option>10000~</option>
-					</select>
+					<input id="memberCount" type="text" name="test" placeholder="ex)직원수를 입력해주세요 ">
 				</div>
 			</div>
 		</div>
 
 		<div class="Terms_of_service">
-			<div id="form-label">이용약관</div>
-			<select multiple class="sel2" name="sellist2">
+			<div class="sel2">이용약관</div>
+			<select multiple id="form-label" name="sellist2">
 				<option>제 9 조 (개인회원 정보, 이력서 노출)</option>
 				<option>① “개인회원”의 이력서는 개인이 회원가입 또는 이력서 작성 및 수정시 희망한 형태로 이력서를 노출한다.</option>
 				<option>② "회사"는 개인회원이 회원정보, 이력서의 공개/비공개 지정, 이력서상의 연락처 공개/비공개를 자유롭게 선택할 수 있도록 하여야 한다.</option>
@@ -173,6 +167,7 @@
 				companyName: $("#companyName").val(),
 				address: $("#address").val(),
 				email: $("#email").val(),
+				companyNumber:$("#companyNumber").val(),
 				regionCodeName: $("#regionCodeName").val(),
 				intro: $("#intro").val(),
 				years: $("#years").val(),
