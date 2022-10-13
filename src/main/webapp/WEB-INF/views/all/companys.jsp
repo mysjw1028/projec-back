@@ -13,7 +13,7 @@
 <!-- <a class="dropdown_item" >내 프로필</a>
     <a class="dropdown_item" >로그아웃</a> -->
 <body>
-
+	<form>
 	<div class=" container">
 
 		<div class="center_header">
@@ -42,11 +42,10 @@
 			<div class="representativemailform">
 				<p class="representativemailformtext">대표메일</p>
 				<div class="center">
-					<input id="email" type="text" name="test" placeholder="대표메일을 입력해주세요">
+					<input id="email" type="email" name="test" placeholder="대표메일을 입력해주세요">
 				</div>
 			</div>
 		</div>
-
 
 		<!-- 대표지/대표메일구간 끝-->
 
@@ -61,7 +60,8 @@
 					</button>
 				</div>
 				<div class="centerbusiness">
-					<input id="companyNumber" type="text" name="test" placeholder="사업자번호 입력해주세요">
+					<input id="companyNumber" type="text" name="test"  onPropertyChange="checkNumber()"
+						placeholder="사업자번호 입력해주세요">
 				</div>
 			</div>
 
@@ -147,95 +147,19 @@
 		<div class="buttonform">
 			<div class="form_check">
 
-				<input type="checkbox" name="item_name1" value="y" onclick="ckCheck('1')"> 이용약관에 동의합니다 (필수)
+				<input type="checkbox" name="item_name1" value="y" onclick="ckCheck('1')"> 이용약관에 동의합니다
+				(필수)
 			</div>
 
 			<div class="buttoncheckform">
 				<p class="buttoncheck2">
-					<a id="buttoncheckform-submit" href="main">제출하기</a>
+					<button type="button" id="	"> 제출하기</button>
 				</p>
-				<!-- 링크이동 제출 후 어느 페이지로 이동 할건지
-                -->
 			</div>
 		</div>
-
 	</div>
-
-	<script>
-	 let companyNumberSameCheck = false;
-	
-	 $("#buttoncheckform-submit").click(()=>{
-		insert();
-	});
-
-	function insert(){
-		let data = {
-				companyName: $("#companyName").val(),
-				address: $("#address").val(),
-				email: $("#email").val(),
-				companyNumber:$("#companyNumber").val(),
-				regionCodeName:$("#regionCodeName").val(),
-				intro: $("#intro").val(),
-				years: $("#years").val(),
-				memberCount: $("#memberCount").val()
-		}
-		$.ajax("/companys",{
-			type: "POST",
-			dataType: "json",
-			data: JSON.stringify(data), // http body에 들고갈 요청 데이터
-			headers: { // http header에 들고갈 요청 데이터
-				"Content-Type": "application/json; charset=utf-8"
-			}
-		}).done((res)=>{
-			if(res.code == 1){ // 성공
-				location.href="/main";
-			}else{ // 실패
-				alert("회사서비스등록에 실패하였습니다.");
-			}
-		});
-	}
-	
-	
-
-	//주소입력창
-	function goPopup() {
-		var pop = window.open("/companys/jusoPopup", "pop",
-				"width=570,height=420, scrollbars=yes, resizable=yes");
-	}
-
-	function jusoCallBack(roadFullAddr) {
-		$('#address').val(roadFullAddr);
-	}
-	//사업자번호 중복체크
- $("#btncompanyNumberSameCheck").click(()=>{
-		$.ajax("/companys/companyNumberSameCheck?companyNumber="+$(" #companyNumber").val(),{
-			type:"GET",
-			dataType: "json",
-			async: true
-		}).done((res)=>{
-			if(res.code == 1){ // 통신 성공
-				if(res.data == false){
-					alert("사업자번호가 중복되지 않았습니다.");
-					companyNumberSameCheck = true;
-				}else{
-					alert("사업자번호가 중복되었어요. 다른 아이디를 사용해주세요.");
-					companyNumberSameCheck = false;		
-					$("#companyNumber").val("");
-				}
-			}
-		});
-	});	  
-	//체크박스 여부
- function ckCheck(num) {
-		if ($("input:checkbox[name=item_name"+ num +"]").is(":checked")) {
-	    	alert("동의하셨습니다");
-	    } else {
-	    	alert("동의해주세요");    
-	    }
-	}
-	
-
-</script>
+</form>
+<script src="/js/companys.js"></script>
 </body>
 </html>
 
