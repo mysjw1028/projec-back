@@ -1,6 +1,5 @@
 package site.metacoding.miniproject1.web;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,19 +39,19 @@ public class CompanysController {
 		boolean isSame = companysService.사업자번호중복확인(companyNumber);
 		return new CMRespDto<>(1, "성공", isSame);
 	}
-	
-// 주소입력창
+
+	//주소입력창
 	@RequestMapping(value = "/companys/jusoPopup", method = RequestMethod.GET)
-	public String test() {
+	public String juso() {
 		return "all/jusoPopup";
 	}
 
 	@RequestMapping(value = "/companys/jusoPopup", method = RequestMethod.POST)
-	public String test2() {
+	public String juso2() {
 		return "all/jusoPopup";
 	}
-//주소입력창 완료
 
+	//회사정보 insert
 	@PostMapping("/companys")
 	public @ResponseBody CMRespDto<?> insert(@RequestBody CompanysInsertReqDto companysInsertReqDto) {
 		System.out.println("회사정보 돌아감!!!!!");// ajax 사용

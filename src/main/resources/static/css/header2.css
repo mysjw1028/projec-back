@@ -44,9 +44,9 @@ s .company_header_inner .company_menu {
     color: #bbb;
     padding: 16px;
     font-size: 14px;
-    border: none;
-    
+    border: none; 
   }
+  
 .dropdown-content {
   display: none;
   position: absolute;

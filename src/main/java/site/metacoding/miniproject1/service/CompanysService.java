@@ -15,7 +15,7 @@ public class CompanysService {
 	private final CompanysDao companysDao;
 
 	public void 회사정보등록(CompanysInsertReqDto companysInsertReqDto) {
-		System.out.println("dddddddddddddddddddd");
+		System.out.println("DB에 데이터 들어감");
 		companysDao.insert(companysInsertReqDto.toEntity());
 	}
 

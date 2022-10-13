@@ -57,7 +57,7 @@
 				<div class="businessnumberform">
 					사업자번호
 					<button id="btncompanyNumberSameCheck" type="button">
-						<a href="">사업자번호 중복 체크</a>
+						<a href="javascript:void(0);">사업자번호 중복 체크</a>
 					</button>
 				</div>
 				<div class="centerbusiness">
@@ -196,6 +196,8 @@
 		});
 	}
 	
+	
+
 	//주소입력창
 	function goPopup() {
 		var pop = window.open("/companys/jusoPopup", "pop",
@@ -208,6 +210,25 @@
 	
 
 
+	//사업자번호 중복체크
+ $("#btncompanyNumberSameCheck").click(()=>{
+		$.ajax("/companys/companyNumberSameCheck?companyNumber="+$(" #companyNumber").val(),{
+			type:"GET",
+			dataType: "json",
+			async: true
+		}).done((res)=>{
+			if(res.code == 1){ // 통신 성공
+				if(res.data == false){
+					alert("사업자번호가 중복되지 않았습니다.");
+					companyNumberSameCheck = true;
+				}else{
+					alert("사업자번호가 중복되었어요. 다른 아이디를 사용해주세요.");
+					companyNumberSameCheck = false;		
+					$("#companyNumber").val("");
+				}
+			}
+		});
+	});	  
 	
 </script>
 </body>
