@@ -1,6 +1,8 @@
 package site.metacoding.miniproject1.service;
 
 
+import java.awt.Checkbox;
+
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -27,5 +29,7 @@ public class CompanysService {
 			return true;
 		}
 	}
+	
+	
 
 }

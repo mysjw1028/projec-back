@@ -39,6 +39,8 @@ public class CompanysController {
 		boolean isSame = companysService.사업자번호중복확인(companyNumber);
 		return new CMRespDto<>(1, "성공", isSame);
 	}
+	
+	
 
 	//주소입력창
 	@RequestMapping(value = "/companys/jusoPopup", method = RequestMethod.GET)

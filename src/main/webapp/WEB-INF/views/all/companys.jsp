@@ -146,14 +146,13 @@
 
 		<div class="buttonform">
 			<div class="form_check">
-				<label for="agree_all"> <input type="checkbox" name="agree_all" id="agree_all">
-					<span>이용약관에 동의합니다 (필수)</span>
-				</label>
+
+				<input type="checkbox" name="item_name1" value="y" onclick="ckCheck('1')"> 이용약관에 동의합니다 (필수)
 			</div>
 
 			<div class="buttoncheckform">
 				<p class="buttoncheck2">
-					<a id="buttoncheckform-submit" href="companys">제출하기</a>
+					<a id="buttoncheckform-submit" href="main">제출하기</a>
 				</p>
 				<!-- 링크이동 제출 후 어느 페이지로 이동 할건지
                 -->
@@ -189,7 +188,7 @@
 			}
 		}).done((res)=>{
 			if(res.code == 1){ // 성공
-				location.href="/companys";
+				location.href="/main";
 			}else{ // 실패
 				alert("회사서비스등록에 실패하였습니다.");
 			}
@@ -207,9 +206,6 @@
 	function jusoCallBack(roadFullAddr) {
 		$('#address').val(roadFullAddr);
 	}
-	
-
-
 	//사업자번호 중복체크
  $("#btncompanyNumberSameCheck").click(()=>{
 		$.ajax("/companys/companyNumberSameCheck?companyNumber="+$(" #companyNumber").val(),{
@@ -229,7 +225,16 @@
 			}
 		});
 	});	  
+	//체크박스 여부
+ function ckCheck(num) {
+		if ($("input:checkbox[name=item_name"+ num +"]").is(":checked")) {
+	    	alert("동의하셨습니다");
+	    } else {
+	    	alert("동의해주세요");    
+	    }
+	}
 	
+
 </script>
 </body>
 </html>
