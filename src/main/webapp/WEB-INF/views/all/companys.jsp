@@ -153,7 +153,7 @@
 
 			<div class="buttoncheckform">
 				<p class="buttoncheck2">
-					<button type="button" id="	"> 제출하기</button>
+					<button type="button" id="buttoncheckform-submit"> 제출하기</button>
 				</p>
 			</div>
 		</div>

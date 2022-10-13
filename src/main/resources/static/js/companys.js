@@ -1,10 +1,8 @@
 
-
-
-
 let companyNumberSameCheck = false;
 
 $("#buttoncheckform-submit").click(() => {
+	companyNameCheck();
 	emailCheck();
 	insert();
 });
@@ -78,16 +76,8 @@ function ckCheck(num) {
 	}
 }
 /****************유효성 검사*******************/
-function emailCheck() {
-	let email = $("#email").val();
-	let emailRule = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
-	if (emailRule.test(email)) {
-		return true;
-	} else {
-		alert("이메일 적어주세요");
-		return;
-	}
-}
+
+//한번 더 확인하기 회사이름 확인창
 
 function companyNameCheck() {
 	let companyName = $("#companyName").val();
@@ -96,14 +86,20 @@ function companyNameCheck() {
 		return true;
 	} else {
 		alert("회사이름을 적어주세요");
-		return;
+		history.back();
 	}
 }
 
-
-
-
-
-
+//이메일 확인창 체크해보기
+function emailCheck() {
+	let email = $("#email").val();
+	let emailRule = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+	if (emailRule.test(email)) {
+		return true;
+	} else {
+		alert("이메일 적어주세요");
+		history.back();
+	}
+}
 
 
