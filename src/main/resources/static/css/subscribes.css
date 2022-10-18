@@ -6,7 +6,7 @@
 	align-items: center;
 	flex-direction: column;
 	height: auto;
-	margin-bottom: 50px;
+	font-family: GmarketSansMedium;
 }
 
 .graph {
@@ -17,6 +17,7 @@
 	width: 950px;
 	margin-top: 40px;
 	margin-bottom: 30px;
+	margin-left: -25px;
 }
 
 table {
@@ -47,10 +48,10 @@ a:hover {
 	display: block;
 }
 
-.container .company_body .recruitment .next_company {
+.container .company_body .next_company {
 	color: #0000ee;
 }
 
-.container .company_body .deadline .out_company {
+.container .company_body .out_company {
 	color: #bbb;
 }

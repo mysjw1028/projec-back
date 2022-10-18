@@ -10,7 +10,7 @@ import site.metacoding.miniproject1.web.dto.Companys.CompanysInsertReqDto;
 @RequiredArgsConstructor
 @Service
 public class CompanysService {
-
+	
 	private final CompanysDao companysDao;
 
 	public void 회사정보등록(CompanysInsertReqDto companysInsertReqDto) {
