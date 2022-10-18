@@ -148,6 +148,7 @@ function companyNameCheck() {
 		return false;
 	}
 }
+
 //주소 체크
 function addressCheck() {
 
