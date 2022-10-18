@@ -27,10 +27,8 @@ public class SubscribesController {
 
 	@GetMapping("/subscribes/{id}")
 	public String subscribesform(@PathVariable Integer id, Model model) {
-		System.out.println("돌아감!!!!!!!!!!!!!!!!");
 		List<SubscribesRespListDto> subcribesList = subsribesService.구독목록(id);
 		model.addAttribute("subcribesList", subcribesList);
-		System.out.println(subcribesList);
 		return "subscribes/subscribes";
 	}
 
